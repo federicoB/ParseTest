@@ -39,8 +39,17 @@ app = {
     },
     showHomePage: function () {
         //create a new Home page view and show it
-        app.homePageView = new HomePage();
-        app.homePageView.print();
+        var query = new Parse.Query(Post);
+        query.find({
+            success: function (posts) {
+                app.homePageView = new HomePage(posts);
+                app.homePageView.print();
+            },
+            error: function (error) {
+                alert("Error: " + error.code + " " + error.message);
+            }
+        });
+
     },
     /**
      * Sign up a new user with the username,password and email given through the inputs.
@@ -58,6 +67,7 @@ app = {
                 app.signUpView.inputPassword.value = "";
                 app.signUpView.inputEmail.value = "";
                 alert(user.getUsername() + " you successfully signed up", null);
+                app.currentUser = user;
                 app.showHomePage();
             },
             error: function (user, error) {
@@ -71,6 +81,7 @@ app = {
             success: function (user) {
                 // Do stuff after successful login.
                 alert("Welcome " + user.getUsername(), null);
+                app.currentUser = user;
                 app.showHomePage();
             },
             error: function (user, error) {
@@ -84,6 +95,20 @@ app = {
             Parse.User.logOut();
             app.showLogin();
         }
+    },
+    makePost: function () {
+        post = new Post.create(app.homePageView.textArea.value, app.currentUser);
+        post.save(null, {
+            success: function (post) {
+                // Execute any logic that should take place after the object is saved.
+                alert('New object created with objectId: ' + post.id);
+            },
+            error: function (post, error) {
+                // Execute any logic that should take place if the save fails.
+                // error is a Parse.Error with an error code and message.
+                alert('Failed to create new object, with error code: ' + error.message);
+            }
+        });
     }
 };
 

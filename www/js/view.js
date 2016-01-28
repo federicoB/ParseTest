@@ -83,8 +83,9 @@ SignUp.prototype.print = function () {
     this.mainFrame.appendChild(sectionGridBlock);
 };
 
-HomePage = function () {
+HomePage = function (posts) {
     View.call();
+    this.posts = posts;
 };
 
 HomePage.prototype = Object.create(View.prototype);
@@ -98,14 +99,22 @@ HomePage.prototype.print = function () {
     logoutButton.innerHTML = "Logout";
     logoutButton.id = "logoutButton";
     logoutButton.addEventListener("click",app.makeLogOut);
-    var textArea = document.createElement("textarea");
-    textArea.id = "postInputText";
+    this.textArea = document.createElement("textarea");
+    this.textArea.id = "postInputText";
     var submitButton = document.createElement("button");
     submitButton.innerHTML = "Submit";
     submitButton.id = "submitButton";
+    submitButton.addEventListener("click",app.makePost);
     var line = document.createElement("hr");
     this.mainFrame.appendChild(logoutButton);
-    this.mainFrame.appendChild(textArea);
+    this.mainFrame.appendChild(this.textArea);
     this.mainFrame.appendChild(submitButton);
     this.mainFrame.appendChild(line);
+        for (var key in this.posts) {
+        var postView = document.createElement("article");
+        var post = this.posts[key];
+        postView.innerHTML = post.get("Author").getUsername()+" ha scritto: " + post.get("text");
+        postView.className += "post";
+        this.mainFrame.appendChild(postView);
+    }
 };

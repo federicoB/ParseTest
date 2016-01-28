@@ -46,6 +46,14 @@ button {
     height: 5%;
 }
 
+.post {
+    margin:5%;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5%;
+    padding: 5%;
+}
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     
