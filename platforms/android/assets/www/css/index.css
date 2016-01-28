@@ -8,17 +8,42 @@ body {
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
     height:100%;
     margin:0px;
-    padding:0px;
+    padding:1%;
     width:100%;
 }
 
 /* Portrait layout (default) */
-button input {
-    display: block;
+button,input {
+    margin: 1%;
 }
 
 .mediumMarginTop {
     margin-top: 15% !IMPORTANT;
+}
+
+button,textarea,input {
+    display: block;
+}
+
+#postInputText {
+    width: 96%;
+    margin: 2%;
+}
+
+.centered {
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logoutButton {
+    float : right;
+}
+
+button {
+    margin-left: 2%;
+    width: 20%;
+    height: 5%;
 }
 
 /* Landscape layout (with min-width) */

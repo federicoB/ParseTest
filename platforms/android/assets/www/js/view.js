@@ -1,5 +1,5 @@
 View = function () {
-    View.prototype.mainFrame = document.getElementById("mainFrame");
+    View.prototype.mainFrame = document.body;
 };
 
 /**
@@ -21,30 +21,26 @@ Login.prototype.constructor = Login;
 
 Login.prototype.print = function () {
     this.clean();
-    var sectionGridBlock = document.createElement("section");
-    sectionGridBlock.className += "align-center grid-block";
-    var sectionContainer = document.createElement("section");
-    sectionContainer.className += "grid-container mediumMarginTop";
     this.inputUserName = document.createElement("input");
     this.inputUserName.setAttribute("type","text");
     this.inputUserName.setAttribute("placeholder","username");
+    this.inputUserName.className += "centered";
     this.inputPassword = document.createElement("input");
     this.inputPassword.setAttribute("type","password");
     this.inputPassword.setAttribute("placeholder","password");
+    this.inputPassword.className += "centered";
     var loginButton = document.createElement("button");
-    loginButton.className += "button";
+    loginButton.className += "button centered";
     loginButton.innerHTML = "Login";
     loginButton.addEventListener("click",app.makeLogin);
     var signUpButton = document.createElement("button");
-    signUpButton.className += "button";
+    signUpButton.className += "button centered";
     signUpButton.innerHTML = "Sign up";
     signUpButton.addEventListener("click",app.showSignUp);
-    sectionGridBlock.appendChild(sectionContainer);
-    sectionContainer.appendChild(this.inputUserName);
-    sectionContainer.appendChild(this.inputPassword);
-    sectionContainer.appendChild(loginButton);
-    sectionContainer.appendChild(signUpButton);
-    this.mainFrame.appendChild(sectionGridBlock);
+    this.mainFrame.appendChild(this.inputUserName);
+    this.mainFrame.appendChild(this.inputPassword);
+    this.mainFrame.appendChild(loginButton);
+    this.mainFrame.appendChild(signUpButton);
 };
 
 SignUp = function () {
@@ -53,7 +49,7 @@ SignUp = function () {
 
 SignUp.prototype = Object.create(View.prototype);
 
-SignUp.prototype.constructor = Login;
+SignUp.prototype.constructor = SignUp;
 
 SignUp.prototype.print = function () {
     this.clean();
@@ -65,7 +61,7 @@ SignUp.prototype.print = function () {
     this.inputUserName.setAttribute("type","text");
     this.inputUserName.setAttribute("placeholder","username");
     this.inputEmail = document.createElement("input");
-    this.inputEmail.setAttribute("type","text");
+    this.inputEmail.setAttribute("type","email");
     this.inputEmail.setAttribute("placeholder","e-mail");
     this.inputPassword = document.createElement("input");
     this.inputPassword.setAttribute("type","password");
@@ -85,4 +81,31 @@ SignUp.prototype.print = function () {
     sectionContainer.appendChild(signUpButton);
     sectionContainer.appendChild(backButton);
     this.mainFrame.appendChild(sectionGridBlock);
+};
+
+HomePage = function () {
+    View.call();
+};
+
+HomePage.prototype = Object.create(View.prototype);
+
+HomePage.prototype.constructor = HomePage;
+
+HomePage.prototype.print = function () {
+    this.clean();
+    this.mainFrame.innerHTML += "Write something";
+    var logoutButton = document.createElement("button");
+    logoutButton.innerHTML = "Logout";
+    logoutButton.id = "logoutButton";
+    logoutButton.addEventListener("click",app.makeLogOut);
+    var textArea = document.createElement("textarea");
+    textArea.id = "postInputText";
+    var submitButton = document.createElement("button");
+    submitButton.innerHTML = "Submit";
+    submitButton.id = "submitButton";
+    var line = document.createElement("hr");
+    this.mainFrame.appendChild(logoutButton);
+    this.mainFrame.appendChild(textArea);
+    this.mainFrame.appendChild(submitButton);
+    this.mainFrame.appendChild(line);
 };
