@@ -36,6 +36,7 @@ app = {
                 app.signUpView.inputUserName.value = "";
                 app.signUpView.inputPassword.value = "";
                 app.signUpView.inputEmail.value = "";
+                navigator.notification.alert(user.getUsername()+" you successfully signed up",null);
             },
             error: function (user, error) {
                 // Show the error message somewhere and let the user try again.
@@ -47,6 +48,7 @@ app = {
         Parse.User.logIn(app.loginView.inputUserName.value, app.loginView.inputPassword.value, {
             success: function (user) {
                 // Do stuff after successful login.
+                navigator.notification.alert("Welcome " + user.getUsername(),null);
             },
             error: function (user, error) {
                 // The login failed. Check error to see why.

@@ -17,6 +17,10 @@ button input {
     display: block;
 }
 
+.mediumMarginTop {
+    margin-top: 15% !IMPORTANT;
+}
+
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
     

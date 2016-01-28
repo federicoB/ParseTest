@@ -24,7 +24,7 @@ Login.prototype.print = function () {
     var sectionGridBlock = document.createElement("section");
     sectionGridBlock.className += "align-center grid-block";
     var sectionContainer = document.createElement("section");
-    sectionContainer.className += "grid-container";
+    sectionContainer.className += "grid-container mediumMarginTop";
     this.inputUserName = document.createElement("input");
     this.inputUserName.setAttribute("type","text");
     this.inputUserName.setAttribute("placeholder","username");
@@ -60,7 +60,7 @@ SignUp.prototype.print = function () {
     var sectionGridBlock = document.createElement("section");
     sectionGridBlock.className += "align-center grid-block";
     var sectionContainer = document.createElement("section");
-    sectionContainer.className += "grid-container";
+    sectionContainer.className += "grid-container mediumMarginTop";
     this.inputUserName = document.createElement("input");
     this.inputUserName.setAttribute("type","text");
     this.inputUserName.setAttribute("placeholder","username");
