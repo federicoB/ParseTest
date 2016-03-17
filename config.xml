@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.github.federicoB.parseTest" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>ParseTest</name>
+<widget id="com.github.federicoB.WebAppLab" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>WebAppLab</name>
     <description>
-        A simple app for testing Phonegap and Parse features.
+        A personal app laboratory
     </description>
     <author email="federicobertani96@gmail.com" href="https://github.com/federicoB">
         Federico Bertani

@@ -1,0 +1,38 @@
+/* Portrait layout (default) */
+button,input {
+    margin: 1%;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+body {
+    font-size: 1.5rem;
+}
+
+.mediumMarginTop {
+    margin-top: 15% !IMPORTANT;
+}
+
+#postInputText {
+    width: 96%;
+    margin: 2%;
+}
+
+button {
+        font-size: 1.5rem;
+    margin-left: 2%;
+    margin-right: 2%;
+    width: 30%;
+    height: 5%;
+}
+
+.post {
+    margin:5%;
+    border-radius: 5%;
+    padding: 5%;
+}
+
+
+
