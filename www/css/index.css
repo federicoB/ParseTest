@@ -1,19 +1,19 @@
 * {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
 body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    height:100%;
-    margin:0px;
-    padding:1%;
-    width:100%;
+    -webkit-touch-callout: none; /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none; /* prevent copy paste, to allow, change 'none' to 'text' */
+    height: 100%;
+    margin: 0px;
+    padding: 1%;
+    width: 100%;
 }
 
 /* Portrait layout (default) */
-button,input {
+button, input {
     margin: 1%;
 }
 
@@ -21,7 +21,7 @@ button,input {
     margin-top: 15% !IMPORTANT;
 }
 
-button,textarea,input {
+button, textarea, input {
     display: block;
 }
 
@@ -31,15 +31,14 @@ button,textarea,input {
 }
 
 .centered {
-    width:50%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
 
 #logoutButton {
-    float : right;
+    float: right;
 }
-
 
 button {
     margin-left: 2%;
@@ -48,7 +47,7 @@ button {
 }
 
 .post {
-    margin:5%;
+    margin: 5%;
     border-style: solid;
     border-color: black;
     border-radius: 5%;

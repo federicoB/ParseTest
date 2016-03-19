@@ -1,5 +1,5 @@
 /* Portrait layout (default) */
-button,input {
+button, input {
     margin: 1%;
 }
 
@@ -28,7 +28,7 @@ button {
 }
 
 .post {
-    margin:5%;
+    margin: 5%;
     border-radius: 5%;
     padding: 5%;
 }

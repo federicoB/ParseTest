@@ -1,11 +1,11 @@
 /* Portrait layout (default) */
-button,input {
-    margin : 5%;
+button, input {
+    margin: 5%;
     height: 10%;
-    font-size : 4vmax;
+    font-size: 4vmax;
 }
 
-button.centered,input.centered {
+button.centered, input.centered {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -21,7 +21,7 @@ button.centered,input.centered {
 }
 
 .post {
-    margin:5%;
+    margin: 5%;
     border-radius: 5%;
     padding: 5%;
 }
