@@ -2,6 +2,7 @@
 button,input {
     margin : 5%;
     height: 10%;
+    font-size : 4vmax;
 }
 
 button.centered,input.centered {

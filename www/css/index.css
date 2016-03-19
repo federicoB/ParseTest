@@ -54,14 +54,4 @@ button {
     border-radius: 5%;
     padding: 5%;
 }
-
-/* Landscape layout (with min-width) */
-@media (min-width:301px) and (max-width:600px) {
-
-}
-
-/* Landscape layout (with min-width) */
-@media (min-width:601px) and (max-width:900px) {
-
-}
  

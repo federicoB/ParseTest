@@ -118,3 +118,19 @@ HomePage.prototype.print = function () {
         this.mainFrame.appendChild(postView);
     }
 };
+
+PluginPage = function() {
+    View.call();
+};
+
+PluginPage.prototype = Object.create(View.prototype);
+
+PluginPage.prototype.constructor = PluginPage;
+
+PluginPage.prototype.print = function () {
+    this.clean();
+    var cameraButton = document.createElement("button");
+    cameraButton.innerHTML = "Camera";
+    cameraButton.className += "centered";
+    this.mainFrame.appendChild(cameraButton);
+};

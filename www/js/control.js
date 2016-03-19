@@ -16,16 +16,18 @@ app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function () {
         //connect to parse service
-        Parse.initialize("i28LhssSuliksLKvmD30lSEjQo57IAntkornBmlc", "cEptopkDWBHbeod3eaQRcPDS0okBx8JM9Jy6AaFS");
+        // Parse.initialize("i28LhssSuliksLKvmD30lSEjQo57IAntkornBmlc", "cEptopkDWBHbeod3eaQRcPDS0okBx8JM9Jy6AaFS");
         //get the current logged in user
-        app.currentUser = Parse.User.current();
+        // app.currentUser = Parse.User.current();
         //if the user is logged in
-        if (app.currentUser) {
-            // do stuff with the user
-            app.showHomePage();
-        } else {
-            app.showLogin();
-        }
+        //commented for parse suspension
+        /*if (app.currentUser) {
+         // do stuff with the user
+         app.showHomePage();
+         } else {
+         app.showLogin();
+         }*/
+        app.showPluginPage();
     },
     showLogin: function () {
         //create a new login view and show it
@@ -50,6 +52,10 @@ app = {
             }
         });
 
+    },
+    showPluginPage: function () {
+        app.pluginPageView = new PluginPage();
+        app.pluginPageView.print();
     },
     /**
      * Sign up a new user with the username,password and email given through the inputs.

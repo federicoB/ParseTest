@@ -8,7 +8,7 @@ textarea {
 }
 
 body {
-    font-size: 1.5rem;
+    font-size: 4vmax;
 }
 
 .mediumMarginTop {
@@ -21,7 +21,7 @@ body {
 }
 
 button {
-        font-size: 1.5rem;
+    font-size: 4vmax;
     margin-left: 2%;
     margin-right: 2%;
     width: 30%;
